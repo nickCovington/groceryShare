@@ -49,14 +49,14 @@
         </nav>
 
         
+        <div id="veg-header">
+            <img src="./vegetables-header.jpg" alt="">
+        </div>
         
         <!-- WELCOME HEADING -->
         <h1>Welcome to Grocery Share</h1>
         
         
-        <div id="veg-header">
-            <img src="./vegetables-header.jpg" alt="">
-        </div>
 
 
 
