@@ -1,4 +1,6 @@
 #veg-header {
+  width: 70%;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
