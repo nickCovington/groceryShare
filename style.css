@@ -1,6 +1,12 @@
 #veg-header {
-  border: 1px solid black;
-  width: 70%;
-  height: 250px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#veg-header img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
