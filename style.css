@@ -12,7 +12,7 @@
 
 body {
   font-family: "Kiwi Maru", serif;
-  background-color: var(--main-grey);
+  background-color: #d7dbdd;
   margin: 25px;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .card {
-  background-color: var(--main-green);
+  background-color: #58d68d;
   width: 50%;
   margin: auto;
   padding: 15px;
