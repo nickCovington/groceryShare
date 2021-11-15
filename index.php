@@ -37,7 +37,7 @@
     <body style="margin:20px; font-family: 'Kiwi Maru', serif;">
 
         <!-- NAVBAR powered by bootstrap library -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,6 +63,13 @@
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Use our web app to share your grocery lists across the globe. </p>
             <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <p>Create an account to get started:</p>
+            <a href="#" style="text-align: center;">Create Account</a>
         </div>
         
         
