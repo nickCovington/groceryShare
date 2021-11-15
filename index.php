@@ -57,9 +57,13 @@
         <div id="veg-header">
             <img src="./vegetables-header.jpg" alt="">
         </div>
+
+        <br>
         
         <!-- WELCOME HEADING -->
         <h1 id="welcome-header">Welcome to Grocery Share</h1>
+
+        <br>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Use our web app to share your grocery lists across the globe. </p>
