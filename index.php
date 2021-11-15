@@ -38,14 +38,14 @@
 
         <!-- NAVBAR powered by bootstrap library -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" style="border: 1px solid #58d68d; border-radius: 4px" href="#">Grocery Share</a>
+            <a class="navbar-brand" style="border: 1px solid #58d68d; border-radius: 4px; padding:4px;" href="#">Grocery Share</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="#">Checklist</a>
                 <a class="nav-item nav-link" href="#">Description</a>
                 <a class="nav-item nav-link" href="#">Login</a>
@@ -74,7 +74,7 @@
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Create an account to get started:</p>
-            <a href="#" style="text-align: center;">Create Account</a>
+            <a href="./about.html" style="text-align: center;">Create Account</a>
         </div>
         
         
@@ -85,7 +85,7 @@
 
         <!-- FOOTER -->
         <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" style="border: 1px solid #58d68d; border-radius: 4px" href="#">Grocery Share</a>
+            <a class="navbar-brand" style="border: 1px solid #58d68d; border-radius: 4px; padding:4px;" href="#">Grocery Share</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -95,7 +95,7 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="./about.html">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Checklist</a>
