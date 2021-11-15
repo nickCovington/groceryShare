@@ -81,6 +81,7 @@
                 </li>
                 </ul>
                 <span class="navbar-text">I appreciate your visit.</span>
+                <span class="navbar-text"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></span>
             </div>
         </nav>
 
