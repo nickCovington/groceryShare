@@ -25,6 +25,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Grocery Share | Home</title>
+        <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
@@ -80,7 +81,8 @@
                     <a class="nav-link" href="#">Pricing</a>
                 </li>
                 </ul>
-                <span class="navbar-text">I appreciate your visit.</span>
+                <span class="navbar-text">I appreciate your visit.   </span>
+                <br>
                 <span class="navbar-text"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></span>
             </div>
         </nav>

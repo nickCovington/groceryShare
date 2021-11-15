@@ -6,6 +6,10 @@
   --main-green: #58d68d;
 }
 
+* {
+  font-family: "Kiwi Maru", serif;
+}
+
 body {
   font-family: "Kiwi Maru", serif;
   background-color: var(--main-grey);
