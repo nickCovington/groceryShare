@@ -57,7 +57,7 @@
         <!-- WELCOME HEADING -->
         <h1 id="welcome-header">Welcome to Grocery Share</h1>
 
-        <div class="card">
+        <div class="card" style="background-color: #d7dbdd; width=50%">
             <p>Use our web app to share your grocery lists across the globe. </p>
             <br>
             <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
