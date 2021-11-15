@@ -54,8 +54,8 @@
         </nav>
 
         
-        <div id="veg-header">
-            <img src="./vegetables-header.jpg" alt="" style="border-radius:5px;">
+        <div id="veg-header" style="border-radius:5px;">
+            <img src="./vegetables-header.jpg" alt="">
         </div>
 
         <br>
