@@ -13,6 +13,7 @@
 body {
   font-family: "Kiwi Maru", serif;
   background-color: var(--main-grey);
+  margin: 25px;
 }
 
 #veg-header {
@@ -28,4 +29,11 @@ body {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.card {
+  background-color: var(--main-green);
+  width: 50%;
+  margin: auto;
+  padding: 15px;
 }

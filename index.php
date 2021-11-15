@@ -55,7 +55,13 @@
         </div>
         
         <!-- WELCOME HEADING -->
-        <h1>Welcome to Grocery Share</h1>
+        <h1 id="welcome-header">Welcome to Grocery Share</h1>
+
+        <div class="card">
+            <p>Use our web app to share your grocery lists across the globe. </p>
+            <br>
+            <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
+        </div>
         
         
 
@@ -81,7 +87,7 @@
                     <a class="nav-link" href="#">Pricing</a>
                 </li>
                 </ul>
-                <span class="navbar-text">I appreciate your visit.   </span>
+                <span class="navbar-text">I appreciate your visit.     -</span>
                 <br>
                 <span class="navbar-text"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></span>
             </div>
