@@ -45,9 +45,10 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Checklist</a>
+                <a class="nav-item nav-link" href="#">Description</a>
+                <a class="nav-item nav-link" href="#">Login</a>
                 </div>
             </div>
         </nav>
@@ -67,7 +68,7 @@
 
         <br>
 
-        <div class="card">
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Create an account to get started:</p>
             <a href="#" style="text-align: center;">Create Account</a>
         </div>
@@ -90,15 +91,21 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Checklist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
                 </li>
                 </ul>
-                <span class="navbar-text">I appreciate your visit.     -</span>
+                <span class="navbar-text">I appreciate your visit. -</span>
                 <br>
-                <span class="navbar-text"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></span>
+                <span class="navbar-text"><div>- Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></span>
             </div>
         </nav>
 
