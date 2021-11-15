@@ -55,7 +55,7 @@
 
         
         <div id="veg-header">
-            <img src="./vegetables-header.jpg" alt="">
+            <img src="./vegetables-header.jpg" alt="" style="border-radius:5px;">
         </div>
 
         <br>
