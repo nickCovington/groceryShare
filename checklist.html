@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Share | About</title>
+    <title>Grocery Share | Checklist</title>
     <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,8 +21,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
             <a class="nav-item nav-link" href="./index.php">Home</a>
-            <a class="nav-item nav-link active" href="./about.html">About <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
+            <a class="nav-item nav-link" href="./about.html">About </a>
+            <a class="nav-item nav-link active" href="./checklist.html">Checklist <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="./description.html">Description</a>
             <a class="nav-item nav-link" href="#">Login</a>
             </div>
@@ -33,40 +33,50 @@
 
     
     <div style="margin-top: 10px;">
-        <h1>About Me</h1>
+        <h1>Checklist:</h1>
     </div>
 
     <br>
 
     <div class="card" style="background-color: #d7dbdd;">
-        <h2 style="border-bottom: 3px solid #f5b041;">Nicholas Covington</h2>
-        <h3>Senior @ Georgia State University</h3>
-        <h3>Graduating December 2021</h3>
-        <h3>Looking to pursue entry-lvl software development after school.</h3>
+        <h2 style="border-bottom: 3px solid #f5b041;">Database Usage:</h2>
+        <h3>User login credentials</h3>
+        <h3>Current grocery list state</h3>
     </div>
 
     <div class="card" style="background-color: #d7dbdd;">
-        <h2 style="border-bottom: 3px solid #f5b041;">Why 'Grocery Share'?</h2>
-        <h3>I made this tool because I love sharing exotic new foods & recipes with my buddies.</h3>
-        <h3>I figured other people might enjoy the experience as well.</h3>
+        <h2 style="border-bottom: 3px solid #f5b041;">Ajax:</h2>
+        <h3>List creation page, so user can conveniently see in real-time what their list contains. </h3>
     </div>
 
     <div class="card" style="background-color: #d7dbdd;">
-        <h2 style="border-bottom: 3px solid #f5b041;">Tech Stack:</h2>
-        <h3>Heroku</h3>
-        <h3>PHP</h3>
-        <h3>JavaScript</h3>
-        <h3>mySQL</h3>
-        <h3>phpMyAdmin</h3>
-        <h3>Bootstrap css library</h3>
+        <h2 style="border-bottom: 3px solid #f5b041;">Theme:</h2>
+        <h3>Tri-color pallette of #d7dbdd, #f5b041, #58d68d</h3>
+        <h3>Based off <a href="https://htmlcolorcodes.com/" target="_blank"></a> htmlcolorcodes.com material design</h3>
+        <h3>General fruit & veg icons and imagery</h3>
     </div>
 
     <div class="card" style="background-color: #d7dbdd;">
-        <h2 style="border-bottom: 3px solid #f5b041;">Class Take-Aways:</h2>
-        <h3>Before taking web programming, I had no clue how to connect to a database & fetch/store data back and forth between the client & the server.</h3>
-        <h3>I look forward to developing more sites in the future which implement more & more complex database schemas.</h3>
-        <h3>Through this project, I also learned the joys of using external libraries to quickly speed up various processes.</h3>
-        <h3>Bootstrap, in particular, has shown me the wonders of significantly sprucing up a website by just adding a few classnames to an HTML tag. </h3>
+        <h2 style="border-bottom: 3px solid #f5b041;">Library:</h2>
+        <h3>Bootstrap CSS library for navbar, footer, positioning, btns, and lists.</h3>
+    </div>
+
+    <div class="card" style="background-color: #d7dbdd;">
+        <h2 style="border-bottom: 3px solid #f5b041;">JavaScript:</h2>
+        <h3>Alerting user on invalid account creation entries (username already taken, password too short, etc).</h3>
+        <h3>Username and password match not found in the database.</h3>
+    </div>
+
+    <div class="card" style="background-color: #d7dbdd;">
+        <h2 style="border-bottom: 3px solid #f5b041;">Membership:</h2>
+        <h3>Page for account creation.</h3>
+        <h3>User must be logged in and verified before they may create/view grocery lists.</h3>
+    </div>
+
+    <div class="card" style="background-color: #d7dbdd;">
+        <h2 style="border-bottom: 3px solid #f5b041;">Demo User:</h2>
+        <h3>Username = demouser</h3>
+        <h3>Password = ThisIsForWPClass</h3>
     </div>
 
 
@@ -86,11 +96,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="./index.php">Home </a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="./about.html">About <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="./checklist.html">Checklist</a>
+                <a class="nav-link" href="./about.html">About </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./checklist.html">Checklist <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./description.html">Description</a>

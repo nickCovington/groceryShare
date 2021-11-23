@@ -65,8 +65,8 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
-            <p>Use our web app to share your grocery lists across the globe. </p>
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
+            <p>You can use this web app to share your grocery lists across the globe. </p>
             <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
         </div>
 
