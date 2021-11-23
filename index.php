@@ -74,7 +74,7 @@
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Create an account to get started:</p>
-            <a href="./login.php" style="text-align: center;">Create Account</a>
+            <a href="./create-acc.php" style="text-align: center;">Create Account</a>
         </div>
         
         
