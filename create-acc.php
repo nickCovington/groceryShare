@@ -1,5 +1,4 @@
 <?php
-
     //Get Heroku ClearDB connection information
     $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     $cleardb_server = $cleardb_url["host"];
@@ -12,9 +11,50 @@
     $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 
+    echo "<br><br><br> Account creator is running";
 
 
-    echo "clearDB is up and running (hopefully)";
+
+
+    function createAccount($username, $password){
+       
+        $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
+
+        $result = $conn->query($insert);
+
+    }
+
+
+
+
+
+
+
+
+
+    // create new acount in db
+    if(isset($_POST['username'], $_POST['password'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        // $usernameQuery = "SELECT username FROM User WHERE username = '$username' ";
+        
+        // // correct username & pass entered
+        // if(mysqli_num_rows(mysqli_query($conn, $usernameQuery)) > 0){
+        //     setcookie('username', $username, time() + (86400 * 30), "/");
+        //     header("Location: login.php");
+        // // invalid credentials
+        // }else{
+        //     setcookie('username', '', time() + (86400 * 30), "/");
+        //     print("<br>" . "<h3 style='color:red;'> Incorrect Username/Password </h3>" . "<br>");
+        // }
+
+        createAccount($username, $password)
+        
+    }
+
+
+
 
 ?>
 
@@ -24,7 +64,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grocery Share | Home</title>
+        <title>Grocery Share | Create Account</title>
         <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -44,11 +84,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./index.php">Home </a>
                 <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
                 <a class="nav-item nav-link" href="./description.html">Description</a>
-                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
                 </div>
             </div>
         </nav>
@@ -60,27 +100,26 @@
 
         <br>
         
-        <!-- WELCOME HEADING -->
-        <h1 id="welcome-header">Welcome to Grocery Share</h1>
+        <div style="margin-top: 10px;">
+            <h1>Create an account:</h1>
+        </div>
 
         <br>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
-            <p>You can use this web app to share your grocery lists across the globe. </p>
-            <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
+            <form action="">
+                <input type="text" name="username" id="username">
+                <input type="text" name="password" id="password">
+                <input type="submit" name="submit" value="Submit">
+            </form>
         </div>
 
+        
+        
+        
+        
+        
         <br>
-
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
-            <p>Create an account to get started:</p>
-            <a href="./login.php" style="text-align: center;">Create Account</a>
-        </div>
-        
-        
-
-
-
 
 
         <!-- FOOTER -->
@@ -91,8 +130,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.php">Home </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./about.html">About</a>
@@ -103,8 +142,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./description.html">Description</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                 </li>
                 </ul>
                 <span class="navbar-text">I appreciate your visit. -</span>

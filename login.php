@@ -1,20 +1,5 @@
 <?php
 
-    //Get Heroku ClearDB connection information
-    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-    $cleardb_server = $cleardb_url["host"];
-    $cleardb_username = $cleardb_url["user"];
-    $cleardb_password = $cleardb_url["pass"];
-    $cleardb_db = substr($cleardb_url["path"],1);
-    $active_group = 'default';
-    $query_builder = TRUE;
-    // Connect to DB
-    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
-
-
-
-    echo "clearDB is up and running (hopefully)";
 
 ?>
 
@@ -24,7 +9,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grocery Share | Home</title>
+        <title>Grocery Share | Login</title>
         <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -44,11 +29,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./index.php">Home </a>
                 <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
                 <a class="nav-item nav-link" href="./description.html">Description</a>
-                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
                 </div>
             </div>
         </nav>
@@ -91,8 +76,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.php">Home </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./about.html">About</a>
@@ -103,8 +88,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./description.html">Description</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                 </li>
                 </ul>
                 <span class="navbar-text">I appreciate your visit. -</span>
