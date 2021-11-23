@@ -33,7 +33,7 @@
 
 
     // create new acount in db
-    if(isset($_POST['username'], $_POST['password'])){
+    if($_POST['username'] != ""){
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -49,7 +49,7 @@
         //     print("<br>" . "<h3 style='color:red;'> Incorrect Username/Password </h3>" . "<br>");
         // }
 
-        createAccount($username, $password)
+        createAccount($_POST['username'], $_POST['password'])
         
     }
 
@@ -107,7 +107,7 @@
         <br>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
-            <form action="">
+            <form method="POST">
                 <input type="text" name="username" id="username">
                 <input type="text" name="password" id="password">
                 <input type="submit" name="submit" value="Submit">
