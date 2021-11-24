@@ -21,6 +21,8 @@
         $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
 
         $result = $conn->query($insert);
+
+        print("<br><br>" . "<h2>Account has been created. BOO YA<h2>");
     }
 
 
@@ -32,7 +34,7 @@
 
 
     // create new acount in db
-    if($_POST['username'] != ""){
+    if($_POST['username'] != ''){
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -94,8 +96,10 @@
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
             <form method="POST">
-                <input type="text" name="username" id="username">
-                <input type="text" name="password" id="password">
+                <input type="text" name="username" id="username" placeholder="Username" required> 
+                <br>
+                <input type="text" name="password" id="password" placeholder="Password" required>
+                <br>
                 <input type="submit" name="submit" value="Submit">
             </form>
         </div>

@@ -83,9 +83,9 @@
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
             <form method="POST">
-                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="text" name="username" id="username" placeholder="Username" required>
                 <br>
-                <input type="text" name="password" id="password" placeholder="Password">
+                <input type="text" name="password" id="password" placeholder="Password" required>
                 <br>
                 <input type="submit" value="Submit">
             </form>
