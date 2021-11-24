@@ -76,19 +76,19 @@
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
             <h2 style="border-bottom: 3px solid #f5b041;">Your List:</h2>
             <?php
-                $sql = " SELECT * FROM Grocery WHERE username = '$_COOKIE['username']' ";
-                $result = mysqli_query($conn, $sql);
+                // $sql = " SELECT * FROM Grocery WHERE username = '$_COOKIE['username']' ";
+                // $result = mysqli_query($conn, $sql);
         
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
-                        // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
-                        echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
-                    }
-                } else {
-                    echo "0 results";
-                }
+                // if (mysqli_num_rows($result) > 0) {
+                //     // output data of each row
+                //     while($row = mysqli_fetch_assoc($result)) {
+                //         // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
+                //         // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
+                //         echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
+                //     }
+                // } else {
+                //     echo "0 results";
+                // }
             ?>
         </div>
 
