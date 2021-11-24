@@ -15,23 +15,6 @@
     }
 
 
-    echo "<br><br><br> Account creator is running";
-
-
-
-
-    // function createAccount($username, $password){
-       
-    //     $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
-
-    //     $result = $conn->query($insert);
-
-    //     print("<br><br>" . "<h2>Account has been created. BOO YA<h2>");
-    // }
-
-
-
-
 
 
 
@@ -48,7 +31,7 @@
 
         $result = $conn->query($insert);
 
-        print("<br><br>" . $username . "<h2>'s account has been created. BOO YA<h2>");
+        print("<br><br>" . "<h4 style="color:green;">Account has been created for: <h4>" . $username);
     }
 
 
