@@ -3,7 +3,7 @@
     if(!isset($_COOKIE['username'])){
         header("Location: index.php");
     }else{
-        print("Current User: " . $_COOKIE['username'] . "<br>");
+        print("<br><br><br>" . "Current User: " . $_COOKIE['username'] . "<br>");
     }
 
     //Get Heroku ClearDB connection information
@@ -24,22 +24,22 @@
 
 
 
-    function showGrocery(){
+    // function showGrocery(){
 
-        $sql = " SELECT food FROM Grocery WHERE username=$_COOKIE['username'] ";
-        $result = mysqli_query($conn, $sql);
+    //     $sql = " SELECT food FROM Grocery WHERE username=$_COOKIE['username'] ";
+    //     $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
-                // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
-                // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
-                echo "Item: " . $row["food"] . "<br>";
-            }
-        } else {
-            echo "0 results";
-        }
-    }
+    //     if (mysqli_num_rows($result) > 0) {
+    //         // output data of each row
+    //         while($row = mysqli_fetch_assoc($result)) {
+    //             // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
+    //             // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
+    //             echo "Item: " . $row["food"] . "<br>";
+    //         }
+    //     } else {
+    //         echo "0 results";
+    //     }
+    // }
 
   
 
@@ -93,7 +93,7 @@
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
             <h2 style="border-bottom: 3px solid #f5b041;">Your List:</h2>
             <?php
-                showGrocery();
+                // showGrocery();
             ?>
         </div>
 
