@@ -69,7 +69,7 @@
                 <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
                 <a class="nav-item nav-link" href="./description.html">Description</a>
-                <a class="nav-item nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="./login.php">Login <span class="sr-only">(current)</span></a>
                 </div>
             </div>
         </nav>
@@ -126,7 +126,7 @@
                     <a class="nav-link" href="./description.html">Description</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./login.php">Login <span class="sr-only">(current)</span></a>
                 </li>
                 </ul>
                 <span class="navbar-text">I appreciate your visit. -</span>
