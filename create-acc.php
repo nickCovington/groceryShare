@@ -10,20 +10,24 @@
     // Connect to DB
     $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
 
     echo "<br><br><br> Account creator is running";
 
 
 
 
-    function createAccount($username, $password){
+    // function createAccount($username, $password){
        
-        $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
+    //     $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
 
-        $result = $conn->query($insert);
+    //     $result = $conn->query($insert);
 
-        print("<br><br>" . "<h2>Account has been created. BOO YA<h2>");
-    }
+    //     print("<br><br>" . "<h2>Account has been created. BOO YA<h2>");
+    // }
 
 
 
@@ -38,7 +42,13 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-         createAccount($_POST['username'], $_POST['password']);
+        // createAccount($_POST['username'], $_POST['password']);
+
+        $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
+
+        $result = $conn->query($insert);
+
+        print("<br><br>" . $username . "<h2>'s account has been created. BOO YA<h2>");
     }
 
 
