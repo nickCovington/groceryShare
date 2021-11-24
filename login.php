@@ -1,5 +1,37 @@
 <?php
 
+    //Get Heroku ClearDB connection information
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $cleardb_server = $cleardb_url["host"];
+    $cleardb_username = $cleardb_url["user"];
+    $cleardb_password = $cleardb_url["pass"];
+    $cleardb_db = substr($cleardb_url["path"],1);
+    $active_group = 'default';
+    $query_builder = TRUE;
+    // Connect to DB
+    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    if(isset($_POST['username'], $_POST['password'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $usernameQuery = "SELECT username FROM User WHERE username = '$username' ";
+        
+        // correct username & pass entered
+        if(mysqli_num_rows(mysqli_query($conn, $usernameQuery)) > 0){
+            setcookie('username', $username, time() + (86400 * 30), "/");
+            // header("Location: week7.php");
+            print("<br>" . "<h3 style='color:green;'> Yippee, Correct Username/Password </h3>" . "<br>");
+        // invalid credentials
+        }else{
+            setcookie('username', '', time() + (86400 * 30), "/");
+            print("<br>" . "<h3 style='color:red;'> Incorrect Username/Password </h3>" . "<br>");
+        }
+    }
 
 ?>
 
@@ -49,11 +81,16 @@
             <h1>Log In</h1>
         </div>
 
-        <form method="POST">
-            <input type="text" name="username" id="username">
-            <input type="text" name="password" id="password">
-            <input type="submit" value="Submit">
-        </form>
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
+            <form method="POST">
+                <input type="text" name="username" id="username" placeholder="Username">
+                <br>
+                <input type="text" name="password" id="password" placeholder="Password">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
         
         
 

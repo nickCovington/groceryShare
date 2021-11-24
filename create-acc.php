@@ -36,7 +36,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-         createAccount($_POST['username'], $_POST['password'])
+         createAccount($_POST['username'], $_POST['password']);
     }
 
 

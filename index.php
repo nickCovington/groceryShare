@@ -48,7 +48,7 @@
                 <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
                 <a class="nav-item nav-link" href="./description.html">Description</a>
-                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link" href="./login.php">Login</a>
                 </div>
             </div>
         </nav>
