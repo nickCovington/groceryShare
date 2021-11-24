@@ -1,4 +1,10 @@
 <?php
+    // force user back home, if not logged in
+    if(!isset($_COOKIE['username'])){
+        header("Location: index.php");
+    }else{
+        print("Current User: " . $_COOKIE['username'] . "<br>");
+    }
 
     //Get Heroku ClearDB connection information
     $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -15,22 +21,27 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    if(isset($_POST['username'], $_POST['password'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
 
-        $usernameQuery = "SELECT username FROM User WHERE username = '$username' ";
-        
-        // correct username & pass entered
-        if(mysqli_num_rows(mysqli_query($conn, $usernameQuery)) > 0){
-            setcookie('username', $username, time() + (86400 * 30), "/");
-            header("Location: dashboard.php");
-        // invalid credentials
-        }else{
-            setcookie('username', '', time() + (86400 * 30), "/");
-            print("<br><br>" . "<h3 style='color:red;'> Incorrect Username/Password </h3>" . "<br>");
+
+
+    function showGrocery(){
+
+        $sql = " SELECT food FROM Grocery WHERE username=$_COOKIE['username'] ";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) {
+                // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
+                // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
+                echo $row["food"] . "<br>";
+            }
+        } else {
+            echo "0 results";
         }
     }
+
+  
 
 ?>
 
@@ -64,7 +75,6 @@
                 <a class="nav-item nav-link" href="./about.html">About</a>
                 <a class="nav-item nav-link" href="./checklist.html">Checklist</a>
                 <a class="nav-item nav-link" href="./description.html">Description</a>
-                <a class="nav-item nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
                 </div>
             </div>
         </nav>
@@ -77,17 +87,14 @@
         <br>
         
         <div style="margin-top: 10px;">
-            <h1>Log In</h1>
+            <h1>Dashboard:</h1>
         </div>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
-            <form method="POST">
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <br>
-                <input type="text" name="password" id="password" placeholder="Password" required>
-                <br>
-                <input type="submit" value="Submit">
-            </form>
+            <h2 style="border-bottom: 3px solid #f5b041;">Your List:</h2>
+            <?php
+                showGrocery();
+            ?>
         </div>
 
         
@@ -116,9 +123,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./description.html">Description</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                 </li>
                 </ul>
                 <span class="navbar-text">I appreciate your visit. -</span>
