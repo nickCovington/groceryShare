@@ -31,7 +31,7 @@
 
         $result = $conn->query($insert);
 
-        print("<br><br>" . "<h4 style="color:green;">Account has been created for: <h4>" . $username);
+        print("<br><br>" . "<h4 style="color:green;">Account has been created for: </h4>" . $username);
     }
 
 
