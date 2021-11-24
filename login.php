@@ -45,22 +45,15 @@
 
         <br>
         
-        <!-- WELCOME HEADING -->
-        <h1 id="welcome-header">Welcome to Grocery Share</h1>
-
-        <br>
-
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
-            <p>You can use this web app to share your grocery lists across the globe. </p>
-            <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
+        <div style="margin-top: 10px;">
+            <h1>Log In</h1>
         </div>
 
-        <br>
-
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
-            <p>Create an account to get started:</p>
-            <a href="./login.php" style="text-align: center;">Create Account</a>
-        </div>
+        <form method="POST">
+            <input type="text" name="username" id="username">
+            <input type="text" name="password" id="password">
+            <input type="submit" value="Submit">
+        </form>
         
         
 

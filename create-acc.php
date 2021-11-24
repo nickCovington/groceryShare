@@ -21,7 +21,6 @@
         $insert = "INSERT INTO User (username, password) VALUES ('$username', '$password') ";
 
         $result = $conn->query($insert);
-
     }
 
 
@@ -37,20 +36,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        // $usernameQuery = "SELECT username FROM User WHERE username = '$username' ";
-        
-        // // correct username & pass entered
-        // if(mysqli_num_rows(mysqli_query($conn, $usernameQuery)) > 0){
-        //     setcookie('username', $username, time() + (86400 * 30), "/");
-        //     header("Location: login.php");
-        // // invalid credentials
-        // }else{
-        //     setcookie('username', '', time() + (86400 * 30), "/");
-        //     print("<br>" . "<h3 style='color:red;'> Incorrect Username/Password </h3>" . "<br>");
-        // }
-
-        createAccount($_POST['username'], $_POST['password'])
-        
+         createAccount($_POST['username'], $_POST['password'])
     }
 
 
