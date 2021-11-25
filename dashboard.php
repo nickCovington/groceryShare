@@ -23,11 +23,11 @@
 
 
     // deleting groceries
-    function deleteGrocery($id){
-        $delete = " DELETE FROM Grocery WHERE id = '$id' ";
+    // function deleteGrocery($id){
+    //     $delete = " DELETE FROM Grocery WHERE id = '$id' ";
 
-        $result = $conn->query($delete);
-    }
+    //     $result = $conn->query($delete);
+    // }
 
 
   
@@ -79,7 +79,7 @@
             <h1>Dashboard:</h1>
         </div>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px; background: #58d68d;">
             <h2 style="border-bottom: 3px solid #f5b041;">Your List:</h2>
             <?php
                 $currentUser = $_COOKIE['username'];
@@ -112,6 +112,16 @@
         <br>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+            <p>Delete Item:</p>
+            <form method="GET">
+                <input type="text" name="delete-item" placeholder="Item to delete" required>
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+
+        <br>
+
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
             <p>Updated List:</p>
             <?php
                 if($_GET['add-item'] != ''){
@@ -128,8 +138,30 @@
                     if (mysqli_num_rows($result) > 0) {
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                            $delURL = "<a href='https://grocery-share-1.herokuapp.com/dashboard.php?cmd=delete&id={$row["id"]}'>Delete</a>";
-                            echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . $delURL . "<br>";
+                            // $delURL = "<a href='https://grocery-share-1.herokuapp.com/dashboard.php?cmd=delete&id={$row["id"]}'>Delete</a>";
+                            echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                }
+
+                if($_GET['delete-item'] != ''){
+                    $itemToDelete = $_GET['delete-item'];
+
+                    $delete = " DELETE  FROM Grocery WHERE food = '$itemToDelete' ";
+
+                    $result = $conn->query($delete);
+
+                    // re-show db contents with item removed
+                    $sql = " SELECT * FROM Grocery WHERE username = '$currentUser' ";
+                    $result = mysqli_query($conn, $sql);
+            
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            // $delURL = "<a href='https://grocery-share-1.herokuapp.com/dashboard.php?cmd=delete&id={$row["id"]}'>Delete</a>";
+                            echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
                         }
                     } else {
                         echo "0 results";
@@ -145,10 +177,10 @@
 
 
         <?php
-            // deleting grocery items
-            if($_GET['cmd'] == 'delete'){
-                deleteGrocery($_GET['id']);
-            }
+            // // deleting grocery items
+            // if($_GET['cmd'] == 'delete'){
+            //     deleteGrocery($_GET['id']);
+            // }
         ?>
 
         
