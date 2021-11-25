@@ -66,7 +66,7 @@
         <br>
         
         <div style="margin-top: 10px;">
-            <h1>Dashboard:</h1>
+            <h1>Community Viewer:</h1>
         </div>
 
         <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
