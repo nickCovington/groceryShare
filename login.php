@@ -90,6 +90,13 @@
             </form>
         </div>
 
+        <br>
+
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+            <p>If you're new, create an account:</p>
+            <a href="./create-acc.php" style="text-align: center;">New Account</a>
+        </div>
+
         
         
 

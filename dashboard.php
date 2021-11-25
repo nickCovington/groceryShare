@@ -93,6 +93,25 @@
             ?>
         </div>
 
+        <br><br>
+
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+            <p>Add Item:</p>
+            <form method="GET">
+                <input type="text" name="add-item" placeholder="Item to add" required>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+        <?php
+            if($_GET['add-item'] != ''){
+                $itemToAdd = $_GET['add-item'];
+
+                $insert = "INSERT INTO Grocery (food, username) VALUES ('$itemToAdd', '$currentUser')";
+
+                $result = $conn->query($insert);
+            }
+        ?>
+
         
         
 
