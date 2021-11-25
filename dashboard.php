@@ -123,7 +123,7 @@
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
                             // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
-                            $delURL = "[<a href='https://grocery-share-1.herokuapp.com/dashboard.php?cmd=delete&id={$row["id"]}'>X</a>]";
+                            $delURL = "<a href='https://grocery-share-1.herokuapp.com/dashboard.php?cmd=delete&id={$row["id"]}'>Delete</a>";
                             echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . $delURL . "<br>";
                         }
                     } else {
