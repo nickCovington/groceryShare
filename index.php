@@ -65,7 +65,7 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px; background: #58d68d">
             <h2 style="border-bottom: 3px solid #f5b041;">Usage:</h2>
             <p>You can use this web app to share your grocery lists across the globe. </p>
             <p>... or get inspired by viewing other's lists & try something new on your next grocery trip.</p>
@@ -73,14 +73,14 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px;">
             <h2 style="border-bottom: 3px solid #f5b041;">Create an account to get started:</h2>
             <a href="./create-acc.php" style="text-align: center;">Create Account</a>
         </div>
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px;">
             <h2 style="border-bottom: 3px solid #f5b041;">See what the community's up to:</h2>
             <a href="./viewer.php" style="text-align: center;">Community Lists</a>
         </div>
