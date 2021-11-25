@@ -69,7 +69,7 @@
             <h1>Community Viewer:</h1>
         </div>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px; background: #58d68d;">
             <h2 style="border-bottom: 3px solid #f5b041;">All Current Groceries:</h2>
             <?php
                 $sql = " SELECT * FROM Grocery ";
