@@ -87,7 +87,7 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px; background: #d7dbdd">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px; background: #58d68d">
             <form method="POST">
                 <input type="text" name="username" id="username" placeholder="Username" required> 
                 <br>

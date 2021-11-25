@@ -101,7 +101,7 @@
 
         <br><br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px;">
             <p>Add Item:</p>
             <form method="GET">
                 <input type="text" name="add-item" placeholder="Item to add" required>
@@ -111,7 +111,7 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px;">
             <p>Delete Item:</p>
             <form method="GET">
                 <input type="text" name="delete-item" placeholder="Item to delete" required>
@@ -121,7 +121,7 @@
 
         <br>
 
-        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+        <div class="card" style="background-color: #58d68d; width=500px; margin:auto; padding:20px;">
             <p>Updated List:</p>
             <?php
                 if($_GET['add-item'] != ''){
