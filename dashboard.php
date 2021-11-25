@@ -102,30 +102,37 @@
                 <input type="submit" value="Add">
             </form>
         </div>
-        <?php
-            if($_GET['add-item'] != ''){
-                $itemToAdd = $_GET['add-item'];
 
-                $insert = "INSERT INTO Grocery (food, username) VALUES ('$itemToAdd', '$currentUser')";
+        <br>
 
-                $result = $conn->query($insert);
+        <div class="card" style="background-color: #d7dbdd; width=500px; margin:auto; padding:20px;">
+            <p>Updated List:</p>
+            <?php
+                if($_GET['add-item'] != ''){
+                    $itemToAdd = $_GET['add-item'];
 
-                // re-show db contents with new added item
-                $sql = " SELECT * FROM Grocery WHERE username = '$currentUser' ";
-                $result = mysqli_query($conn, $sql);
-        
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
-                        // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
-                        echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
+                    $insert = "INSERT INTO Grocery (food, username) VALUES ('$itemToAdd', '$currentUser')";
+
+                    $result = $conn->query($insert);
+
+                    // re-show db contents with new added item
+                    $sql = " SELECT * FROM Grocery WHERE username = '$currentUser' ";
+                    $result = mysqli_query($conn, $sql);
+            
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            // $delURL = "[<a href='https://codd.cs.gsu.edu/~ncovington3/week5.php?cmd=delete&id={$row["id"]}'>Delete</a>]";
+                            // echo "id: " . $row["id"]. " ----- Name: " . $row["firstname"]. " " . $row["lastname"]. " ----------- Phone: " . $row["phone"] . " $delURL" . "<br>";
+                            echo "ID: " . $row["id"] . "----- Item: " . $row["food"] . "----- User:" . $row["username"] . "<br>";
+                        }
+                    } else {
+                        echo "0 results";
                     }
-                } else {
-                    echo "0 results";
                 }
-            }
-        ?>
+            ?>
+            
+        </div>
 
 
 
